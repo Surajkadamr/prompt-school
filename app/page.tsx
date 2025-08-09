@@ -24,30 +24,38 @@ import "@/components/ui/progress.tsx"
 export default function PromptSchoolLanding() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      {/* Header */}
-      <header className="px-4 lg:px-6 h-16 flex items-center backdrop-blur-sm sticky top-0 z-50 font-mono bg-[rgba(251,246,255,1)]">
-        <Link href="/" className="flex items-center justify-center">
-          <Brain className="h-8 w-8 text-black" />
-          <span className="ml-2 text-gray-900 text-lg lg:text-xl  font-bold">Prompt-School</span>
-        </Link>
-        <nav className="ml-auto hidden md:flex gap-6">
-          <Link href="#features" className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors">
-            Features
-          </Link>
-          <Link href="#tests" className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors">
-            Tests
-          </Link>
-
-          <Link href="#about" className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors">
-            About
-          </Link>
-        </nav>
-        <div className="ml-auto lg:ml-6 flex items-center gap-4">
-          <Button className="bg-purple-600 hover:bg-purple-700 text-white" asChild>
-            <Link href="/test">Start Testing</Link>
-          </Button>
-        </div>
-      </header>
+        {/* Header */}
+        <header className="sticky top-0 z-50 w-full border-b border-purple-100 bg-white/80 backdrop-blur-sm shadow-sm">
+          <div className="container flex h-16 items-center">
+            <Link href="/" className="flex items-center">
+              <Brain className="h-8 w-8 text-purple-600" />
+              <span className="ml-2 text-gray-900 text-lg lg:text-xl font-bold">Prompt-School</span>
+            </Link>
+            <nav className="ml-auto hidden md:flex items-center space-x-6">
+              <Link
+                href="#features"
+                className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors hover:underline underline-offset-4"
+              >
+                Features
+              </Link>
+              <Link
+                href="#tests"
+                className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors hover:underline underline-offset-4"
+              >
+                Tests
+              </Link>
+              <Link
+                href="#about"
+                className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors hover:underline underline-offset-4"
+              >
+                About
+              </Link>
+            </nav>
+            <Button className="ml-6 bg-purple-600 hover:bg-purple-700 text-white" asChild>
+              <Link href="/test">Start Testing</Link>
+            </Button>
+          </div>
+        </header>
 
       <main className="flex-1">
         {/* Hero Section */}
